@@ -1,0 +1,133 @@
+cd /mnt/qfg/Tate_qfg/AD-DINOv3
+
+cat > .gitignore <<'EOF'
+# ============================================================
+# AD-DINOv3 Project .gitignore
+# Only keep source code, scripts, configurations and documents
+# ============================================================
+
+# ==================== 1. 数据集 ====================
+/Datasets/
+/data/
+/asset/
+
+# 常见数据文件
+*.csv
+*.tsv
+*.jsonl
+*.parquet
+*.h5
+*.hdf5
+*.lmdb
+*.npy
+*.npz
+*.pkl
+*.pickle
+
+# ==================== 2. 模型权重 ====================
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+*.engine
+*.weights
+*.bin
+
+# 权重目录
+/checkpoints/
+/weights/
+/pretrained_weights/
+/pretrained_models/
+/saved_models/
+
+# ==================== 3. 训练结果 ====================
+/logs/
+/runs/
+/outputs/
+/results/
+/experiments/
+/wandb/
+/tensorboard/
+/lightning_logs/
+
+# 运行日志
+*.log
+nohup.out
+nohup*.out
+events.out.tfevents.*
+
+# ==================== 4. 压缩文件 ====================
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# ==================== 5. 图片 ====================
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tif
+*.tiff
+*.webp
+*.gif
+
+# ==================== 6. 视频 ====================
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.flv
+
+# ==================== 7. Python 缓存 ====================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ==================== 8. Jupyter Notebook ====================
+.ipynb_checkpoints/
+*.ipynb
+
+# ==================== 9. 虚拟环境 ====================
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+ENV/
+conda-env/
+
+# ==================== 10. IDE 文件 ====================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ==================== 11. 临时文件 ====================
+*.tmp
+*.temp
+*.bak
+*.backup
+.DS_Store
+Thumbs.db
+
+# ==================== 12. 保留源码和配置 ====================
+# 以下文件不会因为扩展名被上述规则忽略
+# Python:      *.py
+# Shell:       *.sh
+# C/C++:       *.c, *.cpp, *.h, *.hpp
+# Config:      *.yaml, *.yml, *.toml, *.ini
+# JSON:        *.json
+# Documents:   *.md, *.txt
+# Dependencies: requirements.txt, pyproject.toml
+EOF
