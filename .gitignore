@@ -1,13 +1,10 @@
-cd /mnt/qfg/Tate_qfg/AD-DINOv3
-
-cat > .gitignore <<'EOF'
 # ============================================================
 # AD-DINOv3 Project .gitignore
 # Only keep source code, scripts, configurations and documents
 # ============================================================
 
 # ==================== 1. 数据集 ====================
-/Datasets/
+
 /data/
 /asset/
 
@@ -130,4 +127,25 @@ Thumbs.db
 # JSON:        *.json
 # Documents:   *.md, *.txt
 # Dependencies: requirements.txt, pyproject.toml
-EOF
+# Dataset loader source only; exclude dataset payloads.
+/Datasets/**
+!/Datasets/**/
+!/Datasets/**/*.py
+!/Datasets/**/*.json
+!/Datasets/**/*.yaml
+!/Datasets/**/*.yml
+!/Datasets/**/*.toml
+!/Datasets/**/*.ini
+!/Datasets/**/*.md
+!/Datasets/**/*.sh
+
+# Local data, weights and generated results.
+/Data/
+/data/
+/checkpoint/
+/checkpoints/
+/ckpt/
+/CLIP/ckpt/
+/Result/
+/Results/
+/results/
