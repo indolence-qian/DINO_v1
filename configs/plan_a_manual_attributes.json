@@ -1,0 +1,11 @@
+{
+  "generator": "manual",
+  "pairs": [
+    {"attribute": "surface continuity", "normal": "an unbroken smooth surface", "defect": "a surface with a narrow crack"},
+    {"attribute": "texture uniformity", "normal": "an evenly textured surface", "defect": "a surface with an irregular rough patch"},
+    {"attribute": "edge integrity", "normal": "a continuous intact edge", "defect": "an edge with a chipped notch"},
+    {"attribute": "surface cleanliness", "normal": "a clean surface of uniform color", "defect": "a surface with a localized stain"},
+    {"attribute": "surface profile", "normal": "a flat surface without indentations", "defect": "a surface with a localized dent"},
+    {"attribute": "finish condition", "normal": "a smooth surface with an intact finish", "defect": "a surface with a visible scratch"}
+  ]
+}

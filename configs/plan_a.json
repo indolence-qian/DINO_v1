@@ -1,0 +1,33 @@
+{
+  "source": "visa",
+  "target": "mvtec",
+  "image_size": 512,
+  "batch_size": 4,
+  "accumulation_steps": 2,
+  "epochs": 15,
+  "workers": 4,
+  "seed": 42,
+  "validation_fraction": 0.2,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.01,
+  "precision": "bf16",
+  "prototype_count": 4,
+  "reference_fraction": 0.4,
+  "proposal_count": 4,
+  "region_radius": 1,
+  "context_radius": 3,
+  "hidden_dim": 128,
+  "fusion": "learned",
+  "region_mode": "compare",
+  "region_engine": "qwen",
+  "pair_mode": "paired",
+  "llm_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "backbone_weights": "dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth",
+  "dinotxt_weights": "weights/dinov3_vitl16_dinotxt_vision_head_and_text_encoder-a442d8f5.pth",
+  "loss_weights": {
+    "dice": 1.0,
+    "image": 0.5,
+    "semantic": 0.25,
+    "region": 0.25
+  }
+}

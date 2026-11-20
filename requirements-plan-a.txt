@@ -1,0 +1,10 @@
+# Install CUDA-enabled torch and matching torchvision in the server environment first.
+transformers>=4.48,<5
+safetensors>=0.4
+ftfy
+regex
+numpy
+Pillow>=9.1
+scipy
+scikit-learn
+tifffile

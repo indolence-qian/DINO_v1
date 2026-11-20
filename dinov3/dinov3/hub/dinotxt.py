@@ -76,7 +76,13 @@ def dinov3_vitl16_dinotxt_tet1280d20h24l(
         else:
             url = convert_path_or_url_to_url(dinotxt_weights)
         vision_head_and_text_encoder_state_dict = torch.hub.load_state_dict_from_url(url, check_hash=check_hash)
-        model.load_state_dict(vision_head_and_text_encoder_state_dict, strict=False)
+        incompatible = model.load_state_dict(vision_head_and_text_encoder_state_dict, strict=False)
+        missing_tower_keys = [
+            key for key in incompatible.missing_keys
+            if key.startswith(("visual_model.head.", "text_model."))
+        ]
+        if missing_tower_keys:
+            raise RuntimeError(f"Incomplete dino.txt companion checkpoint. Missing: {missing_tower_keys[:8]}")
     else:
         model.init_weights()
     return model, get_tokenizer(bpe_path_or_url=bpe_path_or_url)

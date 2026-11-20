@@ -1,5 +1,7 @@
 # AD-DINOv3: Enhancing DINOv3 for Zero-Shot Anomaly Detection with Anomaly-Aware Calibration
 
+方案 A 的 DINOv3 / dino.txt / Qwen 实验路线见 [设计方案](./设计方案.md)。入口脚本为 `bash run_plan_a.sh`。
+
 [![Paper](https://img.shields.io/badge/Paper-arXiv%3A2509.14084-b31b1b.svg)](https://arxiv.org/abs/2509.14084)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 
